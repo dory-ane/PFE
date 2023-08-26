@@ -62,21 +62,21 @@ else:
 
     st.write(f'Diagramme Linéaire entre {x_axis2} et {y_axis2}')
     plt.figure(figsize=(10, 6))
-    sns.lineplot(x=data1[x_axis2], y=data1[y_axis])
+    sns.lineplot(x=data1[x_axis2], y=data1[y_axis2])
     plt.xlabel(x_axis2)
     plt.ylabel(y_axis2)
     st.pyplot(plt)
 
-    # Sélection des colonnes pour le camembert
-    st.header("Camembert")
-    column_2 = st.selectbox('Sélectionnez la colonne pour le camembert:', columns, key='column_2')
+    # Sélection des colonnes pour le diagramme en barre pour une variable cible
+    st.header("Diagramme en barre avec variable cible")
+    x_axis3 = st.selectbox('Sélectionnez la colonne pour l\'axe X du diagramme linéaire:', columns, key='x_axis3')
+    y_axis3 = st.selectbox('Sélectionnez la colonne pour l\'axe Y du diagramme linéaire:', columns, key='y_axis3')
 
-    st.write(f'Camembert pour la colonne {column_2}')
-    wedge_values = data1[column_2].value_counts()
-    plt.figure(figsize=(8, 6))
-    plt.pie(wedge_values, labels=wedge_values.index, autopct='%1.1f%%', startangle=140)
+    st.write(f'Diagramme en barre entre {y_axis3} et la variable cible {x_axis3}')
+    plt.figure(figsize=(3, 1))
+    grid = sns.FacetGrid(data1, col=x_axis3)
+    grid.map(sns.countplot, y_axis3)
+    plt.xlabel(y_axis3)
     st.pyplot(plt)
-
-
 
 
