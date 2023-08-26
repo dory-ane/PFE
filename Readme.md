@@ -1,6 +1,9 @@
  # PROJET DE FIN D'ETUDE M2 ANALYST DE DONNEE #
+ 
  #Objectif du projet: Concevoir une plateforme de visualisation interactive de la donnée
+
  #Auteur: Doriane Mbouzang
+
  #Statut: Etudiante Mastère 2 en Analyse et Science de la donnée
  
 Dans le cadre de notre proejt de fin d'étude, nous j'ai choisi de travailler sur la mise en place d'une application de nettoyage
@@ -9,7 +12,7 @@ j'ai choisi la librairie streamlit.
 
 Structure de l'application de nettoyage et de visualisation des données.
 
-La plateforme de visualisation sera divisée en 4 parties:
+L'application de visualisation est constitué de 4 pages:
 - Une page d'accueil
 - Une page de chargement de la donnée
 - Une page de nettoyage (prétraitement des données)
