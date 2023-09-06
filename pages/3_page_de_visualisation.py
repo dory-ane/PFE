@@ -26,6 +26,7 @@ else:
     y_axis = st.selectbox('Sélectionnez la colonne pour l\'axe Y :', columns, key='y_axis')
 
     st.write(f'Graphique de dispersion entre {x_axis} et {y_axis}')
+
     fig, ax = plt.subplots()
     plt.scatter(data1[x_axis], data1[y_axis])
     plt.xlabel(x_axis)
