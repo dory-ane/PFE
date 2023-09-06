@@ -13,9 +13,11 @@ if "data" not in st.session_state:
     if uploaded_file is not None:
         # Lecture d'un fichier téléchargé
         content = uploaded_file.getvalue().decode("utf-8")  # Obtention du contenu du fichier
+        # Après avoir obtenu le fichier sous forme de séquence de bytes, decode() permet de le
+        # convertir en une chaîne de caractères (string) en utilisant l'encodage UTF-8.
 
         # Détection du séparateur en comptant le nombre d'occurrences de différentes options
-        possible_separators = [",", ";", "\t"]  # Les séparateurs possibles
+        possible_separators = [",", ";", "\t"]  # Les séparateurs possibles : "\t" représente le caractère de tabulation
         separator_counts = {sep: content.count(sep) for sep in possible_separators}
         best_separator = max(separator_counts, key=separator_counts.get)
 

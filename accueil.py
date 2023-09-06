@@ -13,6 +13,6 @@ st.markdown("Hello, Bienvenue sur notre application de nettoyage et de visualisa
 st.sidebar.write(
     "<div style='text-align:right; font-size:small;'>Conçu par Doriane Mbouzang </div>",
     unsafe_allow_html=True
-)
+) # paramètre de  st.sidebar.write() qui permet permet de rendre le contenu HTML de manière sécurisée
 
 
