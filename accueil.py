@@ -12,8 +12,7 @@ st.markdown("Hello, Bienvenue sur notre application de nettoyage et de visualisa
 
 st.sidebar.write(
     "<div style='text-align:right; font-size:small;'>Conçu par Doriane Mbouzang </div>",
-    unsafe_allow_html=True,
-    key="conception_by"
+    unsafe_allow_html=True
 )
 
 
