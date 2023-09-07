@@ -11,7 +11,7 @@ else:
     # Code pour télécharger le graphique
     # Vous pouvez ajouter ici un texte de conclusion ou un résumé des résultats
     st.markdown ("Merci d'avoir utilisé notre application pour le nettoyage et la visualisation de vos données,"
-                 "les données nettoyées et/ou labelissées sont maintenant prêts, vous pouvez télécharger le résultat")
+                 "les données nettoyées et/ou labelissées sont maintenant prêtes, vous pouvez télécharger le résultat")
 
     # Téléchargement des données nettoyées
     csv_data = data.to_csv(index=False) # ne pas inclure la colone d'index dans le fichier final
