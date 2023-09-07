@@ -30,7 +30,7 @@ if "data" not in st.session_state:
         data = pd.read_csv(io.StringIO(content), sep=delimiter)
 
         st.write('Aperçu des données :')
-        st.dataframe(data.head(15))
+        st.dataframe(data.head(20))
         st.session_state.data = data
 
     elif url_input != "":
@@ -38,7 +38,7 @@ if "data" not in st.session_state:
         try:
             data = pd.read_csv(url_input)
             st.write('Aperçu des données :')
-            st.dataframe(data.head())
+            st.dataframe(data.head(20))
             st.session_state.data = data
         except Exception as e:
             st.write("Impossible de charger les données à partir de l'URL. Erreur :", e)
